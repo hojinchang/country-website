@@ -29,6 +29,9 @@
 }
 
 :root {
+    --primary-colour: #74ACDF;
+    --secondary-colour: #F6B40E;
+    --accent-colour: #85340A;
     --header-font: 'Nanum Myeongjo', 'Garamond', serif;
     --text-font: 'Inter', 'Arial', sans-serif;
     --box-shadow: 0 0 1rem rgba(0, 0, 0, 0.8);
@@ -40,6 +43,12 @@ body {
     font-family: var(--text-font);
 }
 
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--header-font);
+}
+
+
+
 /* Elements
 --------------------------------------------- */
 
@@ -48,6 +57,7 @@ body {
 --------------------------------------------- */
 a {
 	text-decoration: none;
+    font-family: var(--header-font);
 }
 
 ul {
@@ -70,12 +80,16 @@ ul {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: absolute;
+    width: 100%;
+    z-index: 1;
     padding: 1rem;
 }
 
 .logo {
-    width: 75px;
+    width: 65px;
     height: auto;
+    margin-left: 1rem;
 }
 
 .menu-toggle {
@@ -83,6 +97,7 @@ ul {
     background: none;
     border: none;
     margin: 0 1rem;
+    fill: white;
 }
 
 .menu-toggle.toggled .nav-menu {
@@ -102,7 +117,7 @@ ul {
 .nav-menu a {
     display: block;
     padding: 1rem;
-    font-size: 1.1rem;
+    font-size: 1.3rem;
     font-weight: bold;
 
     transition: transform 0.3s;
@@ -135,14 +150,80 @@ ul {
 
 @media (min-width: 60em) {
     .nav-menu a {
-        font-size: 1.5rem;
+        font-size: 1.6rem;
     }
 }
 
-
-
 /* Main
 --------------------------------------------- */
+.hero-video-section {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.hero-video-section video {
+    display: block;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+
+.section-banner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.section-banner h1 {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.2);
+    font-size: 3rem;
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    letter-spacing: 7px;
+}
+
+#nav-down {
+    color: var(--secondary-colour);
+    font-size: 72px;
+    padding: 1rem;
+}
+
+.nav-down-btn {
+    cursor: pointer;
+    position: absolute;
+    bottom: 0px;
+
+    transition: opacity 1s ease-in-out;
+    animation: 2s bounce-down infinite normal;
+    z-index: 1;
+}
+
+@keyframes bounce-down {
+    0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+    40% {transform: translateY(-30px);}
+    60% {transform: translateY(-15px);}
+    
+}
+
+@media (min-width: 45em) {
+    .section-banner h1 {
+        font-size: 4rem;
+        padding: 1rem 3rem;
+        border-radius: 1rem;
+    }
+}
+
+@media (min-width: 60em) {
+    .section-banner h1 {
+        font-size: 5rem;
+    }
+}
+
 
 
 /* Footer
