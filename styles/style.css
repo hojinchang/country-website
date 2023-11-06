@@ -1,0 +1,149 @@
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Generic (CALLED IN ANOTHER FILE)
+	- Normalize
+	- Box sizing
+	- Media width
+# Base
+	- Typography
+	- Elements
+	- Links
+# Layouts
+# Components
+	- Header
+	- Main
+	- Footer
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# Base
+--------------------------------------------------------------*/
+
+/* Typography
+--------------------------------------------- */
+*, *::before, *:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --header-font: 'Nanum Myeongjo', 'Garamond', serif;
+    --text-font: 'Inter', 'Arial', sans-serif;
+    --box-shadow: 0 0 1rem rgba(0, 0, 0, 0.8);
+}
+
+
+body {
+	font-size: 1rem;
+    font-family: var(--text-font);
+}
+
+/* Elements
+--------------------------------------------- */
+
+
+/* Links
+--------------------------------------------- */
+a {
+	text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+/*--------------------------------------------------------------
+# Layout
+--------------------------------------------------------------*/
+
+
+
+/*--------------------------------------------------------------
+# Components
+--------------------------------------------------------------*/
+
+/* Header
+--------------------------------------------- */
+.site-navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+.logo {
+    width: 75px;
+    height: auto;
+}
+
+.menu-toggle {
+    display: block;
+    background: none;
+    border: none;
+    margin: 0 1rem;
+}
+
+.menu-toggle.toggled .nav-menu {
+    display: block;
+}
+
+.nav-menu {
+    display: none;
+    position: absolute;
+    top: 107px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.4);
+}
+
+.nav-menu a {
+    display: block;
+    padding: 1rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+
+    transition: transform 0.3s;
+}
+
+.nav-menu a:hover {
+    transform: scale(1.1);
+}
+
+.site-navigation.toggled .nav-menu {
+    display: block;
+}
+
+
+@media (min-width: 45em) {
+    .menu-toggle {
+        display: none;
+    }
+
+    .site-navigation .nav-menu,
+    .site-navigation.toggled .nav-menu {
+        display: flex;
+        position: relative;
+        top: 0;
+        gap: 0.5rem;
+        margin: 0 2rem;
+        box-shadow: none;
+    }
+}
+
+@media (min-width: 60em) {
+    .nav-menu a {
+        font-size: 1.5rem;
+    }
+}
+
+
+
+/* Main
+--------------------------------------------- */
+
+
+/* Footer
+--------------------------------------------- */

@@ -4,10 +4,10 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Argentina</title>
-        <!-- Inter, Montserrat, and Roboto Font Import -->
+        <!-- Inter and Nanum Myeongjo Font Import -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Inter&family=Montserrat&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Inter&family=Nanum+Myeongjo&display=swap" rel="stylesheet">
         <!-- Favicon import -->
         <link rel="icon" type="image/x-icon" href="images/argentina-favicon.svg">
         <!-- Google Icons import -->
@@ -18,8 +18,32 @@
         <link rel="stylesheet" href="styles/normalize-fwd.css">
         <link rel="stylesheet" href="styles/style.css">
 
+        <script src="scripts/navigation.js" defer></script>
+        <script src="scripts/script.js" defer></script>
     </head>
     <body>
+        <header>
+            <nav class="site-navigation" id="site-nagivation">
+                <a href="index.html">
+                    <img class="logo" src="images/argentina-favicon.svg" alt="Argentina website favicon">
+                </a>
+
+                <button class="menu-toggle" aria-controls="header-menu" aria-expanded="false" aria-label="Menu Toggle">
+					<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24">
+						<title>Menu Icon</title>
+						<path d="M24 6h-24v-4h24v4zm0 4h-24v4h24v-4zm0 8h-24v4h24v-4z"></path>
+					</svg>
+				</button>
+
+                <ul class="nav-menu" id="header-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#">Discover</a></li>
+                    <li><a href="#">Food</a></li>
+                    <li><a href="#">Culture</a></li>
+                    <li><a href="#">Credits</a></li>
+                </ul>
+            </nav>
+        </header>
         
     </body>
 </html>
