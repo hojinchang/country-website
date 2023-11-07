@@ -27,9 +27,10 @@
 
 :root {
     --primary-colour: #74ACDF;
-    --secondary-colour: #0b82bd;
-    --accent-colour-1: #F6B40E;
-    --accent-colour-2: #A9A9A9;
+    --secondary-colour: #0B82BD;
+    --accent-colour-1: #FFFFFF;
+    --accent-colour-2: #F6B40E;
+    --accent-colour-3: #A9A9A9;
     --header-font: 'Nanum Myeongjo', 'Garamond', serif;
     --text-font: 'Inter', 'Arial', sans-serif;
     --box-shadow: 0 0 1rem rgba(0, 0, 0, 0.8);
@@ -101,7 +102,7 @@ ul {
     background: none;
     border: none;
     margin: 0 1rem;
-    fill: white;
+    fill: var(--accent-colour-1);
 }
 
 .menu-toggle.toggled .nav-menu {
@@ -111,10 +112,11 @@ ul {
 .nav-menu {
     display: none;
     position: absolute;
-    top: 107px;
+    top: 6.3rem;
     left: 0;
     right: 0;
     text-align: center;
+    background-color: var(--accent-colour-1);
     box-shadow: 0 5px 5px rgba(0, 0, 0, 0.4);
 }
 
@@ -123,13 +125,13 @@ ul {
     padding: 1rem;
     font-size: 1.3rem;
     font-weight: 800;
-    color: white;
+    color: black;
 
     transition: transform 0.3s;
 }
 
 .nav-menu a:hover {
-    color: var(--accent-colour-1);
+    color: var(--accent-colour-2);
     transform: scale(1.1);
 }
 
@@ -151,7 +153,10 @@ ul {
         gap: 0.5rem;
         margin: 0 2rem;
         box-shadow: none;
+        background-color: transparent;
     }
+
+    
 }
 
 @media (min-width: 60em) {
@@ -205,7 +210,7 @@ main {
 }
 
 .section-banner h1 {
-    color: white;
+    color: var(--accent-colour-1);
     font-size: 3rem;
     padding: 1rem 2rem;
     border-radius: 0.25rem;
@@ -214,7 +219,7 @@ main {
 }
 
 #nav-down {
-    color: var(--accent-colour-1);
+    color: var(--accent-colour-2);
     font-size: 72px;
     padding: 1rem;
 }
@@ -305,7 +310,7 @@ main {
 
 .category-article h3 {
     font-size: 1.5rem;
-    color: white;
+    color: var(--accent-colour-1);
     position: absolute;
     top: 50%;
     left: 50%;
@@ -347,14 +352,14 @@ main {
     font-family: var(--text-font);
     font-weight: 600;
     padding: 1rem 2rem;
-    background-color: var(--accent-colour-1);
+    background-color: var(--accent-colour-2);
     border-radius: 0.5rem;
 
     transition: transform 0.5s ease;
 }
 
 .article-overlay a:hover {
-    color: white;
+    color: var(--accent-colour-1);
     transform: scale(1.2);
 }
 
@@ -377,7 +382,7 @@ main {
 }
 
 #nav-up {
-    color: var(--accent-colour-1);
+    color: var(--accent-colour-2);
     font-size: 32px;
     padding: 1rem;
 }
@@ -403,7 +408,7 @@ main {
 }
 
 .contact-me a {
-    background-color: white;
+    background-color: var(--accent-colour-1);
     color: black;
     font-family: var(--text-font);
     padding: 1rem;
@@ -414,7 +419,7 @@ main {
 }
 
 .contact-me a:hover {
-    background-color: var(--accent-colour-1);
+    background-color: var(--accent-colour-2);
     transform: scale(1.1);
 }
 
@@ -433,7 +438,7 @@ main {
 .social-media-container i {
     font-size: 2.25rem;
     height: auto;
-    color: white;
+    color: var(--accent-colour-1);
 }
 
 .copyright {
@@ -443,7 +448,7 @@ main {
 }
 
 .copyright .footer-name {
-    color: white;
+    color: var(--accent-colour-1);
 }
 
 @media (min-width: 37.5em) {
