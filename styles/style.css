@@ -26,7 +26,8 @@
 }
 
 :root {
-    --primary-colour: #74ACDF;
+    /* --primary-colour: #74ACDF; */
+    --primary-colour: #0b82bd;
     --secondary-colour: #F6B40E;
     --accent-colour: #85340A;
     --header-font: 'Nanum Myeongjo', 'Garamond', serif;
@@ -115,7 +116,7 @@ ul {
     display: block;
     padding: 1rem;
     font-size: 1.3rem;
-    font-weight: bold;
+    font-weight: 800;
     color: white;
 
     transition: transform 0.3s;
@@ -247,12 +248,25 @@ main {
     text-align: center;
     gap: 2rem;
     padding: 2rem 1rem;
-    /* max-width: 100rem; */
 }
 
 .categories-section h2 {
     margin: 3rem auto;
     font-size: 2rem;
+    font-weight: 800;
+    position: relative;
+}
+
+.categories-section h2::after {
+    content: "";
+    max-width: 40rem;
+    height: 0.25rem;
+    margin: 0 auto;
+    position: absolute;
+    bottom: -1rem;
+    left: 0;
+    right: 0;
+    background-color: var(--primary-colour);
 }
 
 .articles-container {
@@ -260,12 +274,13 @@ main {
     justify-content: center;
     flex-wrap: wrap;
     gap: 2rem;
+    max-width: 100rem;
+    padding: 1rem 0;
 }
 
 .category-article {
     max-width: 30rem;
     position: relative;
-    /* overflow: hidden; */
 }
 
 .category-article::before {
