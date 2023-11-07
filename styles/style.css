@@ -342,13 +342,20 @@ main {
     opacity: 1;
 }
 
-.category-article .article-overlay a {
+.article-overlay a {
     color: black;
     font-family: var(--text-font);
     font-weight: 600;
     padding: 1rem 2rem;
     background-color: var(--accent-colour-1);
     border-radius: 0.5rem;
+
+    transition: transform 0.5s ease;
+}
+
+.article-overlay a:hover {
+    color: white;
+    transform: scale(1.2);
 }
 
 
