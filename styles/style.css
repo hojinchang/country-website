@@ -26,10 +26,10 @@
 }
 
 :root {
-    /* --primary-colour: #74ACDF; */
-    --primary-colour: #0b82bd;
-    --secondary-colour: #F6B40E;
-    --accent-colour: #85340A;
+    --primary-colour: #74ACDF;
+    --secondary-colour: #0b82bd;
+    --accent-colour-1: #F6B40E;
+    --accent-colour-2: #A9A9A9;
     --header-font: 'Nanum Myeongjo', 'Garamond', serif;
     --text-font: 'Inter', 'Arial', sans-serif;
     --box-shadow: 0 0 1rem rgba(0, 0, 0, 0.8);
@@ -123,7 +123,7 @@ ul {
 }
 
 .nav-menu a:hover {
-    color: var(--secondary-colour);
+    color: var(--accent-colour-1);
     transform: scale(1.1);
 }
 
@@ -207,7 +207,7 @@ main {
 }
 
 #nav-down {
-    color: var(--secondary-colour);
+    color: var(--accent-colour-1);
     font-size: 72px;
     padding: 1rem;
 }
@@ -266,7 +266,7 @@ main {
     bottom: -1rem;
     left: 0;
     right: 0;
-    background-color: var(--primary-colour);
+    background-color: var(--secondary-colour);
 }
 
 .articles-container {
@@ -276,6 +276,7 @@ main {
     gap: 2rem;
     max-width: 100rem;
     padding: 1rem 0;
+    margin-bottom: 5rem;
 }
 
 .category-article {
@@ -307,7 +308,7 @@ main {
     display: block;
 }
 
-@media (min-width: 45em) {
+@media (min-width: 30em) {
     .category-article h3 {
         font-size: 2rem;
     }
@@ -316,3 +317,87 @@ main {
 
 /* Footer
 --------------------------------------------- */
+#footer-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #74ACDF;
+    padding: 2rem;
+}
+
+#nav-up {
+    color: var(--accent-colour-1);
+    font-size: 32px;
+    padding: 1rem;
+}
+
+.nav-up-btn {
+    cursor: pointer;
+    animation: 2s bounce-up infinite normal;
+    z-index: 2;
+}
+
+@keyframes bounce-up {
+    0%, 20%, 50%, 80%, 100% {transform: translateY(0);} 
+    40% {transform: translateY(-15px);} 
+    60% {transform: translateY(-30px);} 
+}
+
+.contact-me {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.contact-me a {
+    background-color: white;
+    color: black;
+    font-family: var(--text-font);
+    padding: 1rem;
+    border-radius: 0.25rem;
+    font-weight: 600;
+
+    transition: transform 0.3s ease;
+}
+
+.contact-me a:hover {
+    background-color: var(--accent-colour-1);
+    transform: scale(1.1);
+}
+
+.social-media-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.social-media-container a {
+    padding: 1rem;
+}
+
+.social-media-container i {
+    font-size: 2.25rem;
+    height: auto;
+    color: white;
+}
+
+.copyright {
+    font-size: 0.9rem;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.copyright .footer-name {
+    color: white;
+}
+
+@media (min-width: 37.5em) {
+    .contact-me {
+        flex-direction: row;
+        justify-content: center;
+    }
+}
