@@ -27,7 +27,7 @@
 
 :root {
     --primary-colour: #74ACDF;
-    --secondary-colour: #0B82BD;
+    --secondary-colour: #0050A1;
     --accent-colour-1: #FFFFFF;
     --accent-colour-2: #F6B40E;
     --accent-colour-3: #A9A9A9;
@@ -46,11 +46,14 @@ html {
 body {
 	font-size: 1rem;
     font-family: var(--text-font);
-    line-height: 2;
 }
 
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--header-font);
+}
+
+p {
+    line-height: 2;
 }
 
 
@@ -376,6 +379,12 @@ main {
 
 /* Main discover.html
 --------------------------------------------- */
+.image-container {
+    max-width: 30rem;
+    margin: 0 auto;
+}
+
+
 .hero-section.discover-hero {
     background-image: url('../images/discover-hero.jpg');
     background-position: center;
@@ -384,7 +393,7 @@ main {
     height: 100vh;
 }
 
-.discover-intro {
+.discover-section {
     max-width: 40rem;
 }
 
@@ -404,8 +413,6 @@ main {
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    margin: 0 auto;
-    max-width: 30rem;
 }
 
 .discover-intro-images > img {
@@ -415,8 +422,32 @@ main {
     height: 100%;
 }
 
+.landmark-article {
+    padding: 5rem 0;
+}
+
+.landmark-description h2 {
+    color: #0050A1;
+    font-size: 2rem;
+    font-weight: 800;
+}
+
+.landmark-description p {
+    margin: 1rem 0;
+}
+
+.landmark-description img {
+    display: block;
+    width: 30rem;
+}
+
+.article-blue {
+    background-color: var(--primary-colour);
+}
+
+
 @media (min-width: 62.5em) {
-    .discover-intro {
+    .discover-intro.discover-section {
         display: flex;
         justify-content: space-evenly;
         align-items: center;
