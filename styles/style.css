@@ -38,7 +38,7 @@
 
 html {
     scroll-behavior: smooth;
-    scroll-padding-top: 80px;
+    scroll-padding-top: 100px;
 }
 
 /* Typography
@@ -46,6 +46,7 @@ html {
 body {
 	font-size: 1rem;
     font-family: var(--text-font);
+    line-height: 2;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -165,23 +166,24 @@ ul {
     }
 }
 
-/* Main
+/* Main index.html
 --------------------------------------------- */
 main {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 5rem 1rem;
 }
 
-.hero-video-section {
+.hero-section {
     display: flex;
     justify-content: center;
     position: relative;
     width: 100%;
 }
 
-.hero-video-section::before {
+.hero-section::before {
     content: "";
     position: absolute;
     top: 0;
@@ -192,7 +194,7 @@ main {
     z-index: 1; 
 }
 
-.hero-video-section video {
+.hero-section video {
     display: block;
     width: 100%;
     height: 100vh;
@@ -259,17 +261,16 @@ main {
 .categories-section {
     text-align: center;
     gap: 2rem;
-    padding: 2rem 1rem;
 }
 
-.categories-section h2 {
+.page-main-heading {
     margin: 3rem auto;
     font-size: 2rem;
     font-weight: 800;
     position: relative;
 }
 
-.categories-section h2::after {
+.page-main-heading::after {
     content: "";
     max-width: 40rem;
     height: 0.25rem;
@@ -369,7 +370,43 @@ main {
         font-size: 2rem;
     }
 }
+/* Main indx.html END
+--------------------------------------------- */
 
+/* Main discover.html
+--------------------------------------------- */
+.hero-section.discover-hero {
+    background-image: url('../images/discover-hero.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+.discover-intro {
+    max-width: 50rem;
+    margin: 0 auto;
+}
+
+.discover-intro .page-main-heading {
+    text-align: center;
+}
+
+.discover-intro .page-main-heading::after {
+    content: "";
+    max-width: 30rem;
+    height: 0.25rem;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -1rem;
+    margin: 0 auto;
+    background-color: var(--secondary-colour);
+}
+
+
+/* Main discover.html END
+--------------------------------------------- */
 
 /* Footer
 --------------------------------------------- */
