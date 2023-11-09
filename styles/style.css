@@ -76,17 +76,18 @@ ul {
 /*--------------------------------------------------------------
 # Layout
 --------------------------------------------------------------*/
-/* .content-section {
-    margin: 0 auto;
-    width: 100%;
-} */
-
 .content-article {
     padding: 6rem 2rem;
 }
 
 .description {
-    margin: 1rem 0;
+    margin: 2rem 0;
+}
+
+@media (min-width: 62.5em) {
+    .description {
+        margin: 2rem 0 0;
+    }
 }
 
 
@@ -301,7 +302,6 @@ ul {
     flex-wrap: wrap;
     gap: 2rem;
     max-width: 100rem;
-    /* margin-top: 1rem; */
     margin: 1rem auto 0;
 }
 
@@ -393,7 +393,6 @@ ul {
     margin: 0 auto;
 }
 
-
 .hero-section.discover-hero {
     background-image: url('../images/discover-hero.jpg');
     background-position: center;
@@ -421,7 +420,7 @@ ul {
     max-width: 40rem;
 }
 
-.description-container h2 {
+.description-header {
     font-size: 2rem;
     font-weight: 800;
     text-align: center;
@@ -436,22 +435,20 @@ ul {
 
 
 @media (min-width: 62.5em) {
-    .image-container {
-        max-width: 30rem;
+    .image-container,
+    .description-container {
+        max-width: none;
+        width: 50%;
         height: 100%;
-        margin: 0;
     }
 
     .content-article {
-        display: grid;
+        display: flex;
         align-items: center;
-        justify-items: center;
-        grid-template-rows: 35rem;
-        grid-template-columns: 1fr 1fr;
+        justify-content: center;
         gap: 4rem;
         max-width: 70%;
         margin: 0 auto;
-        padding: 6rem 2rem;
     }
 
     .page-main-heading {
@@ -466,6 +463,7 @@ ul {
         display: grid;
         grid-template: 16rem 16rem / 1fr 1fr;
         gap: 1rem;
+        height: auto;
     }
 
     .content-article img {
@@ -474,8 +472,12 @@ ul {
         height: 100%;
     }
 
-    .description-container h2 {
+    .description-header {
         text-align: left;
+    }
+
+    .landmark-image {
+        max-width: 25rem;
     }
 
     .discover-intro-images img:nth-child(1) {
