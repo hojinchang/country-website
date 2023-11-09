@@ -421,13 +421,15 @@ ul {
     max-width: 40rem;
 }
 
-.landmark-article h2 {
+.description-container h2 {
     font-size: 2rem;
     font-weight: 800;
+    text-align: center;
 }
 
 
 .blue-background {
+    color: var(--accent-colour-1);
     background-color: var(--secondary-colour);
     width: 100%;
 }
@@ -470,7 +472,10 @@ ul {
         display: block;
         width: 100%;
         height: 100%;
-        align-self: start;
+    }
+
+    .description-container h2 {
+        text-align: left;
     }
 
     .discover-intro-images img:nth-child(1) {
