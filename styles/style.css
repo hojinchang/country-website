@@ -76,9 +76,13 @@ ul {
 /*--------------------------------------------------------------
 # Layout
 --------------------------------------------------------------*/
-.content-section {
-    padding: 6rem 2rem;
+/* .content-section {
+    margin: 0 auto;
     width: 100%;
+} */
+
+.content-article {
+    padding: 6rem 2rem;
 }
 
 .description {
@@ -178,12 +182,13 @@ ul {
 
 /* Main index.html
 --------------------------------------------- */
-main {
+/* main {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
+    width: 100%;
+} */
 
 .hero-section {
     display: flex;
@@ -296,7 +301,8 @@ main {
     flex-wrap: wrap;
     gap: 2rem;
     max-width: 100rem;
-    margin-top: 1rem;
+    /* margin-top: 1rem; */
+    margin: 1rem auto 0;
 }
 
 .category-article {
@@ -377,7 +383,7 @@ main {
         font-size: 2rem;
     }
 }
-/* Main indx.html END
+/* Main index.html END
 --------------------------------------------- */
 
 /* Main discover.html
@@ -421,30 +427,29 @@ main {
 }
 
 
-.blue-section {
-    background-color: var(--primary-colour);
+.blue-background {
+    background-color: var(--secondary-colour);
+    width: 100%;
 }
 
 
 @media (min-width: 62.5em) {
     .image-container {
-        width: 30rem;
+        max-width: 30rem;
         height: 100%;
         margin: 0;
     }
 
-    .content-section {
-        display: flex;
-        justify-content: center;
-        height: 50rem;
-    }
-
     .content-article {
-        display: flex;
-        justify-content: space-evenly;
+        display: grid;
         align-items: center;
-        width: 80%;
+        justify-items: center;
+        grid-template-rows: 35rem;
+        grid-template-columns: 1fr 1fr;
         gap: 4rem;
+        max-width: 70%;
+        margin: 0 auto;
+        padding: 6rem 2rem;
     }
 
     .page-main-heading {
@@ -452,7 +457,6 @@ main {
     }
 
     .description-container {
-        width: 40rem;
         margin: 0;
     }
 
@@ -460,13 +464,13 @@ main {
         display: grid;
         grid-template: 16rem 16rem / 1fr 1fr;
         gap: 1rem;
-        max-width: 30rem;
     }
 
     .content-article img {
         display: block;
         width: 100%;
         height: 100%;
+        align-self: start;
     }
 
     .discover-intro-images img:nth-child(1) {
