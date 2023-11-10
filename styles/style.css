@@ -653,9 +653,31 @@ thead {
     height: 100vh;
 }
 
+.blockquote-container img {
+    display: block;
+    width: 30rem;
+    margin: 0 auto;
+}
+
+.blockquote-container {
+    max-width: 40rem;
+    margin: 0 auto;
+}
+
+blockquote p {
+    margin: 1rem 0;
+}
+
+
 @media (min-width: 62.5em) {
     .culture-article .description-container{
         order: 2;
+    }
+
+    .blockquote-container {
+        max-width: none;
+        width: 50%;
+        height: 100%;
     }
 
     .tango-images img:nth-child(1) {
