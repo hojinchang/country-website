@@ -426,13 +426,16 @@ ul {
     text-align: center;
 }
 
-
 .blue-background {
     color: var(--accent-colour-1);
     background-color: var(--secondary-colour);
     width: 100%;
 }
 
+
+.slider-input {
+    display: none;
+}
 
 @media (min-width: 62.5em) {
     .image-container,
@@ -451,6 +454,12 @@ ul {
         margin: 0 auto;
     }
 
+    .content-article img {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+
     .page-main-heading {
         margin-top: 0;
     }
@@ -464,20 +473,6 @@ ul {
         grid-template: 16rem 16rem / 1fr 1fr;
         gap: 1rem;
         height: auto;
-    }
-
-    .content-article img {
-        display: block;
-        width: 100%;
-        height: 100%;
-    }
-
-    .description-header {
-        text-align: left;
-    }
-
-    .landmark-image {
-        max-width: 25rem;
     }
 
     .discover-intro-images img:nth-child(1) {
@@ -495,9 +490,24 @@ ul {
         grid-row: 2 / 3;
     }
 
+    .description-header {
+        text-align: left;
+    }
+
+    .landmark-image {
+        max-width: 25rem;
+    }
+
     .landmark-article .description-container{
         order: 2;
     }
+
+
+
+    .slider-input {
+        display: block;
+    }
+
 }
 
 /* Main discover.html END
