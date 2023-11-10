@@ -6,7 +6,7 @@ const imageSlider = (() => {
     const slides = document.querySelectorAll(".slide");
     const navDots = document.querySelectorAll(".dot");
 
-    let slideIdx = 0;
+    let slideIdx = 1;
 
     // Increment / decrement slide
     const nextSlide = (increment) => {
@@ -31,7 +31,7 @@ const imageSlider = (() => {
         })
 
 
-        slides[slideIdx - 1].style.display = "block";
+        slides[slideIdx - 1].style.display = "flex";
         navDots[slideIdx - 1].classList.add("active-dot");
     }
 
@@ -47,7 +47,7 @@ const imageSlider = (() => {
         slideIdx++;
         if (slideIdx > slides.length) {slideIdx = 1};
 
-        slides[slideIdx - 1].style.display = "block";
+        slides[slideIdx - 1].style.display = "flex";
         navDots[slideIdx - 1].classList.add("active-dot");
         setTimeout(autoShowSlides, 10000);
     }
@@ -60,5 +60,5 @@ const imageSlider = (() => {
 
     
     showSlide(slideIdx);
-    autoShowSlides();
+    // autoShowSlides();
 })();
