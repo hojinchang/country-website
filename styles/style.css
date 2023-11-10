@@ -183,14 +183,6 @@ article {
 
 /* Main index.html
 --------------------------------------------- */
-/* main {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-} */
-
 .hero-section {
     display: flex;
     justify-content: center;
@@ -656,6 +648,28 @@ thead {
     background-size: cover;
     height: 100vh;
 }
+
+@media (min-width: 62.5em) {
+
+    .tango-images img:nth-child(1) {
+        grid-column: 1 / 2;
+        grid-row: 1 / 3;
+    }
+
+    .tango-images img:nth-child(2) {
+        grid-column: 2 / 3;
+        grid-row: 1 / 3;
+    }
+
+    .empanadas-images img:nth-child(2) {
+        grid-column: 1 / 2;
+        grid-row: 1 / 3;
+    }
+}
+
+
+/* Main culture.html END
+--------------------------------------------- */
 
 
 /* Footer
