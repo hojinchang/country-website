@@ -72,8 +72,7 @@ const handleResize = () => {
         });
 
         showSlide(slideIdx);
-        // autoShowSlides();
-
+        autoShowSlides();
     } else {    // Run mobile layout
         clearTimeout(autoShowSlidesTimeout);
         autoShowSlidesTimeout = null;
