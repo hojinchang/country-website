@@ -76,6 +76,7 @@ ul {
 /*--------------------------------------------------------------
 # Layout
 --------------------------------------------------------------*/
+.categories-section,
 article {
     padding: 6rem 2rem;
 }
@@ -273,10 +274,6 @@ article {
 }
 
 /* Categories Section */
-.categories-section {
-    padding: 6rem 2rem;
-}
-
 .page-main-heading {
     margin: 0 auto 3rem;
     font-size: 2rem;
@@ -309,6 +306,7 @@ article {
     max-width: 30rem;
     position: relative;
     overflow: hidden;
+    padding: 0;
 }
 
 .category-article::before {
@@ -333,6 +331,7 @@ article {
 
 .category-article img{
     display: block;
+    object-fit: cover;
     transition: transform 0.5s ease;
 }
 
