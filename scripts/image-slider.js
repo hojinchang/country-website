@@ -52,7 +52,6 @@ const autoShowSlides = () => {
 // This function checks for the screen width 
 // If the screen is larger than 62.5em (desktop layout media query), run the image slider code
 // Else, change layour to mobile mode
-
 const handleResize = () => {
     const isLargeScreen = window.innerWidth >= 62.5 * 16;
 
@@ -62,7 +61,7 @@ const handleResize = () => {
         clearTimeout(autoShowSlidesTimeout);
 
         showSlide(slideIdx);
-        autoShowSlides();
+        // autoShowSlides();
     } else { // Run mobile layout
         clearTimeout(autoShowSlidesTimeout);
         autoShowSlidesTimeout = null;
