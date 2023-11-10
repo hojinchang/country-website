@@ -3,6 +3,7 @@ const nextBtn = document.querySelector(".next");
 const previousBtn = document.querySelector(".previous");
 const slides = document.querySelectorAll(".slide");
 const navDots = document.querySelectorAll(".dot");
+const contentSections = document.querySelectorAll(".content-section");
 
 // Increment / decrement slide
 const nextSlide = (increment) => {
@@ -60,14 +61,37 @@ const handleResize = () => {
         slideIdx = 0;
         clearTimeout(autoShowSlidesTimeout);
 
+        // Add blue background 
+        contentSections.forEach(content => {
+            content.classList.add("blue-background");
+        })
+
+        // Remove blue background from individual articles
+        slides.forEach((slide) => {
+            slide.classList.remove("blue-background");
+        });
+
         showSlide(slideIdx);
         // autoShowSlides();
-    } else { // Run mobile layout
+
+    } else {    // Run mobile layout
         clearTimeout(autoShowSlidesTimeout);
         autoShowSlidesTimeout = null;
 
-        slides.forEach(slide => {
+        // Remove blue background from the section
+        contentSections.forEach((content) => {
+            content.classList.remove("blue-background");
+        })
+
+        // Add blue background to odd indexed landmark-articles
+        slides.forEach((slide, idx) => {
             slide.style.display = "block";
+
+            if (idx % 2 === 0) {
+                slide.classList.add("blue-background");
+            } else {
+                slide.classList.remove("blue-background");
+            }
         });
     }
 }
