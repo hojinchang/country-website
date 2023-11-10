@@ -578,6 +578,10 @@ article {
     height: 100vh;
 }
 
+.food-intro-article .description {
+    margin-bottom: 0; 
+}
+
 .table-container {
     display: block;
     overflow-x: auto;
