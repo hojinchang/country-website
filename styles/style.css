@@ -394,7 +394,7 @@ ul {
 }
 
 .hero-section.discover-hero {
-    background-image: url('../images/discover-hero.jpg');
+    background-image: url('../images/discover/discover-hero.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
