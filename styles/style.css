@@ -647,6 +647,16 @@ thead {
 --------------------------------------------- */
 
 
+/* Main culture.html
+--------------------------------------------- */
+.hero-section.culture-hero {
+    background-image: url('../images/culture/culture-hero.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
 
 /* Footer
 --------------------------------------------- */
