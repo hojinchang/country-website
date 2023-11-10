@@ -30,7 +30,6 @@
     --secondary-colour: #0050A1;
     --accent-colour-1: #FFFFFF;
     --accent-colour-2: #F6B40E;
-    --accent-colour-3: #A9A9A9;
     --header-font: 'Nanum Myeongjo', 'Garamond', serif;
     --text-font: 'Inter', 'Arial', sans-serif;
     --box-shadow: 0 0 1rem rgba(0, 0, 0, 0.8);
@@ -522,6 +521,7 @@ article {
         padding: 0.5rem;
         border-radius: 0.5rem;
 
+        transform: translateY(-50%);
         transition: background-color 0.6s ease;
     }
 
