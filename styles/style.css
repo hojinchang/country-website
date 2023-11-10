@@ -650,6 +650,9 @@ thead {
 }
 
 @media (min-width: 62.5em) {
+    .culture-article .description-container{
+        order: 2;
+    }
 
     .tango-images img:nth-child(1) {
         grid-column: 1 / 2;
@@ -663,6 +666,11 @@ thead {
 
     .mate-images img:nth-child(1) {
         grid-column: 1 / 2;
+        grid-row: 1 / 3;
+    }
+
+    .gaucho-images img:nth-child(1) {
+        grid-column: 2 / 3;
         grid-row: 1 / 3;
     }
 }
