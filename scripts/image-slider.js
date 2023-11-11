@@ -5,6 +5,8 @@ const slides = document.querySelectorAll(".slide");
 const navDots = document.querySelectorAll(".dot");
 const contentSections = document.querySelectorAll(".content-section");
 
+const autoSlideTimer = 15000;
+
 // Increment / decrement slide
 const nextSlide = (increment) => {
     showSlide(slideIdx += increment);
@@ -20,7 +22,7 @@ const selectSlide = (idx) => {
 // Reset autoShowSlides timer
 const resetAutoShowSlidesTimer = () => {
     clearTimeout(autoShowSlidesTimeout);
-    autoShowSlidesTimeout = setTimeout(autoShowSlides, 5000);
+    autoShowSlidesTimeout = setTimeout(autoShowSlides, autoSlideTimer);
 }
 
 // Display the slide article
@@ -54,7 +56,7 @@ const autoShowSlides = () => {
     slides[slideIdx - 1].style.display = "flex";
     navDots[slideIdx - 1].classList.add("active-dot");
     
-    autoShowSlidesTimeout = setTimeout(autoShowSlides, 5000);
+    autoShowSlidesTimeout = setTimeout(autoShowSlides, autoSlideTimer);
 }
 
 
