@@ -8,11 +8,19 @@ const contentSections = document.querySelectorAll(".content-section");
 // Increment / decrement slide
 const nextSlide = (increment) => {
     showSlide(slideIdx += increment);
-} 
+    resetAutoShowSlidesTimer();
+}
 
 // Slide nav dot slide selection
 const selectSlide = (idx) => {
     showSlide(slideIdx = idx);
+    resetAutoShowSlidesTimer();
+}
+
+// Reset autoShowSlides timer
+const resetAutoShowSlidesTimer = () => {
+    clearTimeout(autoShowSlidesTimeout);
+    autoShowSlidesTimeout = setTimeout(autoShowSlides, 5000);
 }
 
 // Display the slide article
@@ -46,7 +54,7 @@ const autoShowSlides = () => {
     slides[slideIdx - 1].style.display = "flex";
     navDots[slideIdx - 1].classList.add("active-dot");
     
-    autoShowSlidesTimeout = setTimeout(autoShowSlides, 10000);
+    autoShowSlidesTimeout = setTimeout(autoShowSlides, 5000);
 }
 
 
@@ -73,6 +81,7 @@ const handleResize = () => {
 
         showSlide(slideIdx);
         autoShowSlides();
+
     } else {    // Run mobile layout
         clearTimeout(autoShowSlidesTimeout);
         autoShowSlidesTimeout = null;
