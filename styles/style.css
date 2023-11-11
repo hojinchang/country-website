@@ -55,6 +55,35 @@ p {
     line-height: 2;
 }
 
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 5rem auto 0;
+    text-align: center;
+    max-width: 40rem;
+}
+
+caption {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+}
+
+th, 
+td {
+    border: 1px solid black;
+}
+
+th, 
+td {
+    padding: 1rem;
+}
+
+thead {
+    color: white;
+    background-color: var(--secondary-colour);
+}
+
 
 
 /* Elements
@@ -64,8 +93,13 @@ p {
 /* Links
 --------------------------------------------- */
 a {
+    color: var(--secondary-colour);
 	text-decoration: none;
     font-family: var(--header-font);
+}
+
+a:visited {
+    color: var(--secondary-colour);
 }
 
 ul {
@@ -76,12 +110,18 @@ ul {
 # Layout
 --------------------------------------------------------------*/
 .categories-section,
-article {
+article,
+#credits {
     padding: 6rem 2rem;
 }
 
 .description {
     margin: 2rem 0;
+}
+
+.table-container {
+    display: block;
+    overflow-x: auto;
 }
 
 @media (min-width: 62.5em) {
@@ -582,40 +622,6 @@ article {
     margin-bottom: 0; 
 }
 
-.table-container {
-    display: block;
-    overflow-x: auto;
-}
-
-.cuisine-table {
-    border-collapse: collapse;
-    width: 100%;
-    margin: 5rem auto 0;
-    text-align: center;
-    max-width: 40rem;
-}
-
-.cuisine-table caption {
-    font-size: 1.5rem;
-    font-weight: 600;
-    margin-bottom: 2rem;
-}
-
-th, 
-td {
-    border: 1px solid black;
-}
-
-th, 
-td {
-    padding: 1rem;
-}
-
-thead {
-    color: white;
-    background-color: var(--secondary-colour);
-}
-
 @media (min-width: 62.5em) {
     .food-intro-article.content-article {
         display: block;
@@ -700,10 +706,25 @@ blockquote p {
         grid-row: 1 / 3;
     }
 }
-
-
 /* Main culture.html END
 --------------------------------------------- */
+
+/* Main credits.html
+--------------------------------------------- */
+.hero-section.credits-hero {
+    background-image: url('../images/credits/credits-hero.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+.credits-description {
+    max-width: 40rem;
+    margin: 0 auto;
+}
+
+/* Main credits.html END
 
 
 /* Footer
