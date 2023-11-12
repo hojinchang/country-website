@@ -85,7 +85,6 @@ thead {
 }
 
 
-
 /* Elements
 --------------------------------------------- */
 
@@ -96,6 +95,7 @@ a {
     color: var(--secondary-colour);
 	text-decoration: none;
     font-family: var(--header-font);
+    font-weight: 800;
 }
 
 a:visited {
@@ -183,7 +183,7 @@ article,
     font-weight: 800;
     color: black;
 
-    transition: transform 0.3s;
+    transition: transform 0.3s, font-size 0.5s;
 }
 
 .nav-menu a:hover {
@@ -194,7 +194,6 @@ article,
 .site-navigation.toggled .nav-menu {
     display: block;
 }
-
 
 @media (min-width: 45em) {
     .menu-toggle {
@@ -211,8 +210,6 @@ article,
         box-shadow: none;
         background-color: transparent;
     }
-
-    
 }
 
 @media (min-width: 62.5em) {
@@ -265,6 +262,8 @@ article,
     border-radius: 0.25rem;
     letter-spacing: 4px;
     background-color: rgba(0, 0, 0, 0.5);
+
+    transition: font-size 0.5s ease;
 }
 
 #nav-down {
@@ -358,6 +357,8 @@ article,
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+
+    transition: font-size 0.3s ease;
 }
 
 .category-article img{
@@ -399,7 +400,7 @@ article,
     background-color: var(--accent-colour-2);
     border-radius: 0.5rem;
 
-    transition: transform 0.5s ease;
+    transition: transform 1s ease;
 }
 
 .article-overlay a:hover {
@@ -552,6 +553,7 @@ article,
         margin: 0 1rem;
         padding: 0.5rem;
         border-radius: 0.5rem;
+        color: var(--accent-colour-1);
 
         transform: translateY(-50%);
         transition: background-color 0.6s ease;
