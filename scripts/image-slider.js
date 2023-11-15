@@ -120,3 +120,20 @@ handleResize();
 
 // Listen for window resize events
 window.addEventListener("resize", handleResize);
+
+
+
+
+// Keyboard tab and enter users
+document.addEventListener("keydown", function(event) {
+    if (event.key === "Enter") {
+        // Get the currently focused element
+        const focusedElement = document.activeElement;
+
+        // Check if the focused element is an anchor with the class 'slider-input'
+        if (focusedElement.tagName === "A" && focusedElement.classList.contains("slider-input")) {
+            // Trigger a click event
+            focusedElement.click();
+        }
+    }
+});
