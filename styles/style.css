@@ -172,7 +172,8 @@ article,
     left: 0;
     right: 0;
     text-align: center;
-    background-color: var(--accent-colour-1);
+    border-radius: 0 0 1rem 1rem;
+    background-color: var(--primary-colour);
     box-shadow: 0 5px 5px rgba(0, 0, 0, 0.4);
 }
 
