@@ -5,7 +5,7 @@ const slides = document.querySelectorAll(".slide");
 const navDots = document.querySelectorAll(".dot");
 const contentSections = document.querySelectorAll(".content-section");
 
-const autoSlideTimer = 15000;
+const autoSlideTimer = 13000;
 
 // Increment / decrement slide
 const nextSlide = (increment) => {
