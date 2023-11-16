@@ -800,6 +800,10 @@ blockquote p {
     color: var(--accent-colour-1);
 }
 
+.social-media-container i:hover {
+    color: var(--accent-colour-2);
+}
+
 .copyright {
     font-size: 0.9rem;
     text-align: center;
