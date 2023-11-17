@@ -276,7 +276,7 @@ article,
 .nav-down-btn {
     cursor: pointer;
     position: absolute;
-    bottom: 0px;
+    bottom: 20px;
 
     transition: opacity 1s ease-in-out;
     animation: 2s bounce-down infinite normal;
